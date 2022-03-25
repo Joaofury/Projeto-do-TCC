@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(308deg, #8d4bc3, #530990, #be86ec, #58198c, #300256, #ca8aff, #3e00a2);
+    background-size: 1400% 1400%;
+    font-family: 'Fredoka', sans-serif;
+    -webkit-animation: AnimationName 29s ease infinite;
+    animation: AnimationName 29s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 72%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 72%}
+    50%{background-position:100% 29%}
+    100%{background-position:0% 72%}
+}
+
+.formulario{
+    width: 400px;
+    margin: auto;
+    padding-top: 40px;
+
+}
+
+.card {
+   background-color: rgb(250, 250, 250);
+   padding: 30px;
+   border-radius: 5px;
+}
+
+.card-group{
+    margin-bottom: 10px;
+}
+
+.card-top{
+   text-align: center;
+
+    
+}
+
+.logo{
+ width: 100px;
+
+
+}
+.title{
+    color:#742373;
+}
+
+.card-group > label{
+    text-align: left;
+    width: 100%;
+    color:purple;
+    display: block;
+}
+.card-group > input{
+  border-radius: 5px;
+  outline: 0;
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.card-group > button {
+    margin-top: 10px;
+    background-image: linear-gradient(to right, #7d3ca6, #441e5c);
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px;
+    border: 0px;
+    outline: 0s;
+    color: rgb(196, 196, 196);
+    transition: all;
+    transition-duration: 0.5s;
+}
+.btn button:hover {
+    color: #ffffff;
+    background-image: linear-gradient(to right, #7d3ca6, #210d2e);
+
+}
+.cad{
+    padding: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+    
+
+.cad a{
+    justify-content: right;
+    display: block;
+    color: #511251;
+    transition-duration: 0.3s;
+}
+.cad a:hover{
+    color:rgb(84, 169, 0);
+}
+
+.icon{
+ width: 20px;
+ margin-bottom:-33px;
+ margin-left: 40px;
+}
+.iconsenha{
+    width: 20px;
+    margin-bottom:-33px;
+    margin-left: 45px;
+   }

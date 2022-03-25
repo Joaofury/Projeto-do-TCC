@@ -1,0 +1,22 @@
+body, html
+{
+    font-family: 'Fredoka', sans-serif;
+}
+
+#header {
+width: 100%;
+background-color: rgb(205, 130, 205);
+transition: ease-out 0.2s;
+}
+
+#header .navbar-collapse{
+    width: auto;
+    padding: auto;    
+}
+#header .nav-link{
+    font-weight: 500;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 15px;
+   margin-right: 15px;
+}
