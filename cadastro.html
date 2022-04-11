@@ -11,7 +11,7 @@
     <title>Área de Cadastro</title>
   </head>
     <body>
-        <form class="formulario-cad" action="">
+        <form class="formulario-cad" method="post" action="cadastro.php">
             <div class="card-cad">
                 <div class="card-top-cad">
                      <h2 class="title-cad">Insira suas informações</h2>
@@ -22,14 +22,14 @@
                         </div>
                         <div class="card-group-cad">
                             <label>Usuário</label>
-                            <input type="text" placeholder="Digite seu Username" name="username" required />
+                            <input type="text" placeholder="Digite seu Username" name="usuario" required />
                             </div>
                         <div class="card-group-cad">
                             <label>Senha</label>
                             <input type="password" placeholder="Digite sua senha" name="senha" required />
                             </div>  
                       <div class="card-group-cad">
-                        <select class="estado">
+                        <select class="estado" required>
                             <option selected="" value="">Selecione o Estado (UF)</option>
                             <option value="Acre">Acre</option>
                             <option value="Alagoas">Alagoas</option>
@@ -61,7 +61,7 @@
                             </select>  
                       </div>
                             <div class="card-group-cad-option">
-                                <select class="genero">
+                                <select class="genero" required>
                                     <option selected="" value="">Selecione o Gênero</option>
                                     <option value="feminino">Feminino</option>
                                     <option value="masculino">Masculino</option>

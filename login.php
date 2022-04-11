@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--bootstrap -->
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Document</title>
-</head>
-<body>
-<?php
-    //verifica se existe conexão com bd; caso não tenta, cria uma nova
-    mysql_connect ("localhost","root","") //porta, usuário, senha
-    or die("Erro na conexão com banco de dados"); //caso não consiga conectar mostra a mensagem de erro mostrada na conexão
-
-    $select_db = mysql_select_db("usuarios"); //seleciona o banco de dados
-
-    //Abaixo atribuímos os valores provenientes do formulário pelo método POST
-    $senha = $_POST['senha']; 
-    $email = $_POST['email'];
-
-    $string_sql = "INSERT INTO tab_usuarios (id,senha,email,) VALUES (null,'$email','$senha')"; //String com consulta SQL da inserção
-
-    mysql_query($string_sql,$conexao); //Realiza a consulta
-
-    ?>
-     
-    
-</body>
-</html>
-
-
+<?php  
+  session_start(); 
+ include_once('conexao.php'); 
+    //O campo usuário e senha preenchido entra no if para validar
+    if((isset($_POST['email'])) && (isset($_POST['senha']))){
+        $email = mysqli_real_escape_string($conn, $_POST['email']); //Escapar de caracteres especiais, como aspas, prevenindo SQL injection
+        $senha = mysqli_real_escape_string($conn, $_POST['senha']);
+        $senha = md5($senha);
+            
+        //Buscar na tabela usuario o usuário que corresponde com os dados digitado no formulário
+        $result_usuario = "SELECT * FROM tablogin WHERE email = '$email' && senha = '$senha' LIMIT 1";
+        $resultado_usuario = mysqli_query($conn, $result_usuario);
+        $resultado = mysqli_fetch_assoc($resultado_usuario);
+        if(isset($resultado)){
+            $_SESSION['email'] = $resultado['email'];
+            $_SESSION['senha'] = $resultado['senha'];
+            header("Location: home.html");
+        }else{    
+            //Váriavel global recebendo a mensagem de erro
+            $_SESSION['loginErro'] = "Usuário ou senha Inválido";
+            echo" <script> alert('Usuário ou senha inválido');
+            window.location.replace('login.html');  
+            </script>;";
+           
+        }
+    }
+ 
+ ?>
 
