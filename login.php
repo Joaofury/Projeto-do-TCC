@@ -14,13 +14,14 @@
         if(isset($resultado)){
             $_SESSION['email'] = $resultado['email'];
             $_SESSION['senha'] = $resultado['senha'];
-            header("Location: home.html");
+            header("Location: index.html");
         }else{    
             //Váriavel global recebendo a mensagem de erro
             $_SESSION['loginErro'] = "Usuário ou senha Inválido";
             echo" <script> alert('Usuário ou senha inválido');
             window.location.replace('login.html');  
             </script>;";
+            echo "Ative o javascript";
            
         }
     }

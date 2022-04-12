@@ -11,7 +11,9 @@
 	// executando instrução SQL
  $resultado = @mysqli_query($conn, $sqlinsert);
 //$resultado = @mysqli_query($conexao, "insert into tabelaimg ( codigo,produto, descricao, data, valor) values ('$codigo','$produto', '$descricao', '$data', $valor)");
-  
+if ($senha<8){ //Se X enviado for maior que 3, da erro.Troque o 3 pelo numero que quiser!
+	echo "senha curta";
+	}
 	if (!$resultado) {
 		die('Query Inválida: ' . @mysqli_error($conn));  
 	} else {
@@ -20,6 +22,7 @@
 			  window.location.replace('login.html');
 			  </script>;";
 	} 
+	
 	mysqli_close($conn);
 ?>
 </body>
