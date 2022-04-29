@@ -1,6 +1,6 @@
 function valida() {
     if (valida_cpf(document.getElementById('cpf').value)){
-        alert('cpf válido');
+        
     }
     else{
         alert('CPF Inválido');
@@ -39,4 +39,3 @@ function valida_cpf(cpf) {
     else
         return false;
 }
-//a
