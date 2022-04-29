@@ -2,7 +2,7 @@
 	$host = "localhost"; 			
 	$user = "root"; 
 	$pass = ""; 
-	$banco = "usuario";
+	$banco = "usuarios";
 		
 	$conn = @mysqli_connect($host, $user, $pass, $banco ) 
 	or die ("Problemas com a conexão do Banco de Dados");

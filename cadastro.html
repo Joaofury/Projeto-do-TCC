@@ -7,7 +7,8 @@
 
     <!-- Refêrencias -->
         <link rel="stylesheet" href="css/style.css" />
-
+<!--SCRIPT CPF-->
+<script src="js/verificacpf.js"></script>
     <title>Área de Cadastro</title>
     <link rel="icon" type="image/x-icon" href="assets/ppinformatize.png">
 
@@ -32,7 +33,7 @@
                             </div> 
                             <div class="card-group-cad">
                                 <label>CPF</label>
-                                <input type="number" placeholder="Digite seu cpf" name="cpf" required />
+                                <input type="number" placeholder="Digite seu cpf" id="cpf" name="cpf" required />
                                 </div> 
                       <div class="card-group-cad">
                         <select class="estado" required>
@@ -75,7 +76,7 @@
                                 </select>
                                 </div>
                                 <div class="card-group-cad-button btn2">
-                                <button type="submit">Cadastrar-se</button>
+                                <button type="submit" onclick="valida()">Cadastrar-se</button>
                                 </div>
                                 <div class="card-top cad">
                                     <p>Já tem uma conta?<a href="login.html">Login</a></p>
