@@ -96,11 +96,19 @@ body {
     display: block;
 }
 .card-group-cad > input{
+    position: relative;
   border-radius: 5px;
-  outline: 0;
-  width: 30%;
+  width: 50%;
   height: 30px;
   padding-left: 5px;
+  border-color: rgba(87, 39, 72, 0.655);
+  transition: 1s;
+}
+.card-group-cad input:focus{
+width: 100%;
+transition: 1s;
+border-color: rgb(199, 60, 199);
+outline: 0;
 }
 
 .card-group > button {
