@@ -213,7 +213,7 @@ outline: 0;
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 13s linear infinite;
+    animation: animate 10s linear infinite;
     bottom: -50px;
     
 }
@@ -260,7 +260,7 @@ outline: 0;
     left: 75%;
     width: 110px;
     height: 110px;
-    animation-delay: 3s;
+    /* animation-delay: 3s; */
 }
 
 .circles li:nth-child(7){
@@ -312,3 +312,13 @@ outline: 0;
 
 }
 /*FIM DA ANIMAÇÃO*/
+
+
+/*se o usuario desativar o javascript*/
+.error{
+    color: rgb(184, 64, 64);
+}
+.errorh2{
+    color: rgb(184, 64, 64);
+
+}
