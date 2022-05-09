@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,26 +72,50 @@
 
       <h3>Adicionar transação</h3>
       
-      <form id="form">
-        <div class="form-control">
+      <form id="form" method="POST" action="controlefinanceiro.php">
+       <div class="form-control">
           <label for="text">Nome</label>
-          <input autofocus type="text" id="text" placeholder="Nome da transação" />
+          <input autofocus class="inputransaction" type="text" id="text" placeholder="Nome da transação" />
+          <label for="date">Data</label>
+          <input class="date" type="date" id="date"/> 
+          <label>Categoria</label> 
+            <div class="dropdownf">
+         <input type="text" placeholder="Selecione uma Categoria" class="text" readonly>
+         <div class="option">
+         <div id="salario" name="salario" onclick="show('Salário')"><ion-icon name="cash-outline"></ion-icon>Salário</div>
+         <div id="contas" name="contas" onclick="show('Contas')"><ion-icon name="barcode-outline"></ion-icon>Contas</div>
+         <div id="compras" name="compras" onclick="show('Compras')"><ion-icon name="bag-handle-outline"></ion-icon>Compras</div> 
         </div>
-
+            </div>
+          <!--!--<select class="categoria" required>
+            <option selected="" value="">Selecione uma categoria</option>
+            <option class="fo" value="">Salário</option>
+            <option value="">Compra</option>
+            <option value="">Contas</option>
+        </select> 
+        <!-->
+        </div>
         <div class="form-control">
           <label for="amount">Valor <br />
             <small>(negativo - despesas, positivo - receitas)</small>
           </label>
-          <input type="number" id="amount" placeholder="Valor da transação" />
+          <input type="number" class="inputvalor" id="amount" placeholder="Valor da transação" />
         </div>
 
-        <button class="btn">Adicionar</button>
+        <button class="btnf">Adicionar</button>
       </form>
     </div>
-
+     <!--Scripts-->
+     <noscript>
+      <meta http-equiv="refresh" content="0;url=ativeojava.html">
+     </noscript>
     <script src="js/financeiro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="js/selectioncustom.js"></script>
+    <!--Fim dos Scripts-->
   </body>
 </html>

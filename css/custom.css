@@ -8,14 +8,11 @@ body, html
 position: fixed;
 width: 100%;
 background-color: #793ea9;
-transition: ease-out 0.2s;
+transition: ease-in 0.s;
 padding-top: auto;
 }
 
-#header .navbar-collapse{
-    width: auto;
-    padding: auto;    
-}
+
 #header .nav-link{
     font-weight: 200;
     padding-left: 0;
