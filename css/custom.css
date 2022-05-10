@@ -2,6 +2,20 @@ body, html
 {
     font-family: 'Fredoka', sans-serif;
     background-color: #ffffff99;
+    zoom:0.95;
+    transition: 0.3s;
+}
+.dark-mode{
+    background-color: rgb(18, 18, 18);
+    color: rgb(98, 39, 107);
+    transition: 0.3s;
+}
+.inc-exp-container .dark-mode{
+    background-color: rgb(18, 18, 18);
+
+}
+.escuro{
+    cursor: pointer;
 }
 
 #header {
@@ -14,7 +28,7 @@ padding-top: auto;
 
 
 #header .nav-link{
-    font-weight: 200;
+    /* font-weight: 200; */
     padding-left: 0;
     padding-right: 0;
     margin-left: 15px;

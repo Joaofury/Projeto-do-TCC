@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
     <title>Controle de despesas</title>
   </head>
-  <body><header>
+  <body>
+    <header>
     <div id="header">
      <div class="container-fluid">
      <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
@@ -40,13 +41,16 @@
             <li class="nav-item">
               <a class="nav-link ml-1"  href="login.html">Login</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link ml-1 escuro"  onclick="darkmode()">Modo Escuro</a>
+            </li>
           </ul>
         </nav>
     </div>
     </div>
   </div>
   </header>
-    <h2>Controle de despesas</h2>
+    <h2>mensagem escondida pra n bugar :(</h2>
 
     <div class="containerf">
       <h4>Saldo atual</h4>
@@ -87,6 +91,7 @@
          <div id="compras" name="compras" onclick="show('Compras')"><ion-icon name="bag-handle-outline"></ion-icon>Compras</div> 
         </div>
             </div>
+            
           <!--!--<select class="categoria" required>
             <option selected="" value="">Selecione uma categoria</option>
             <option class="fo" value="">Salário</option>
@@ -116,6 +121,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="js/selectioncustom.js"></script>
+<script src="js/darkmode.js"></script>
     <!--Fim dos Scripts-->
   </body>
 </html>
