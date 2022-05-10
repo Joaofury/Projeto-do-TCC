@@ -14,16 +14,3 @@ option.addEventListener("click"), (e) =>
   if (e.target.dataset.identificador === "option") {
     textBox.value = e.target.innerHTML;
   }
-
-
-
-
-
-
-
-  let teste = document.querySelector('.teste')
-
-teste.onclick = () => {
-    document.querySelector('body').classList.toggle('light')
-    document.querySelector('body').classList.toggle('dark')
-}

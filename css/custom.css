@@ -5,17 +5,33 @@ body, html
     zoom:0.95;
     transition: 0.3s;
 }
+/*scroll bar pesonalizada*/
+body::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #523768;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(121, 30, 115);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */  /* creates padding around scroll thumb */
+  }
 .dark-mode{
     background-color: rgb(18, 18, 18);
     color: rgb(98, 39, 107);
     transition: 0.3s;
 }
-.inc-exp-container .dark-mode{
-    background-color: rgb(18, 18, 18);
-
-}
-.escuro{
+/*fim*/
+.dropdown-item{
     cursor: pointer;
+}
+.dark:hover
+{
+    background-color: #baa7c9;
+    transition: 0.2s;
+    animation:forwards;
 }
 
 #header {
