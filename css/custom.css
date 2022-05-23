@@ -35,11 +35,40 @@ body::-webkit-scrollbar {
 }
 
 #header {
-position: fixed;
+position: sticky;
 width: 100%;
 background-color: #793ea9;
 transition: ease-in 0.s;
 padding-top: auto;
+
+}
+.landingpage2  {
+
+  width: 55%;
+	animation: float 3s ease-in-out infinite;
+  transition: 2s;
+}
+ .landingpage  {
+
+  width: 35%;
+	animation: float 6s ease-in-out infinite;
+  transition: 2s;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+    transform: translatex(0px);
+
+	}
+	50% {
+    transform: translatey(-5px);
+
+	}
+	100% {
+		transform: translatey(0px);
+    transform: translatex(0px);
+
+	}
 }
 
 
@@ -92,6 +121,13 @@ p{
     margin-bottom: 0px;
     padding: 0px;
 
+}
+table{
+    display: absolute;
+    margin:5px;
+    max-width: 50%;
+    margin-top: 30px;
+    /* max-width: 100%; */
 }
 /*Animação do dropdown*/
 @media all and (min-width: 992px) {

@@ -47,65 +47,41 @@
     </div>
     </div>
   </div>
-  </header>
-
-    <div class="containerf">
-      <h4>Saldo atual</h4>
+  </header>    
+      <h1>Resumo Financeiro</h1>
       
-      <h1 id="balance" class="balance">R$ 0.00</h1>
-
-      <div class="inc-exp-container">
-        <div>
-          <h4>Ganhos</h4>
-          <p id="money-plus" class="money plus">+ R$0.00</p>
-        </div>
-
-        <div>
-          <h4>Gastos</h4>
-          <p id="money-minus" class="money minus">- R$0.00</p>
-        </div>
-      </div>
-
-      <h3>Transações</h3>
-      
-      <ul id="transactions" class="transactions">
-      </ul>
-
-      <h3>Adicionar transação</h3>
-      
-      <form id="form">
-       <div class="form-control">
-          <label for="text">Nome</label>
-          <input autofocus class="inputransaction" type="text" id="text" placeholder="Nome da transação" />
-          <label for="date">Data</label>
-          <input class="date" type="date" id="date"/> 
-          <label>Categoria</label> 
-            <div class="dropdownf">
-         <input type="text" placeholder="Selecione uma Categoria" class="text" readonly>
-         <div class="option">
-         <div id="salario" name="salario" onclick="show('Salário')"><ion-icon name="cash-outline"></ion-icon>Salário</div>
-         <div id="contas" name="contas" onclick="show('Contas')"><ion-icon name="barcode-outline"></ion-icon>Contas</div>
-         <div id="compras" name="compras" onclick="show('Compras')"><ion-icon name="bag-handle-outline"></ion-icon>Compras</div> 
-        </div>
-            </div>
-            
-          <!--!--<select class="categoria" required>
-            <option selected="" value="">Selecione uma categoria</option>
-            <option class="fo" value="">Salário</option>
-            <option value="">Compra</option>
-            <option value="">Contas</option>
-        </select> 
-        <!-->
-        </div>
-        <div class="form-control">
-          <label for="amount">Valor <br />
-            <small>(negativo - despesas, positivo - receitas)</small>
-          </label>
-          <input type="number" class="inputvalor" id="amount" placeholder="Valor da transação" />
-        </div>
-
-        <button class="btnf">Adicionar</button>
-      </form>
+      <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>N° da ação</th>
+                <th>Nome da ação</th>
+                <th>Data</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Conta de água</td>
+                <td>2016/01/15</td>
+                <td>Contas</td>
+                <td data-order="1000">-200R$</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mercado</td>
+                <td>2014/03/12</td>
+                <td>Compras</td>
+                <td>-900R$</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Salário</td>
+                <td>2016/01/23</td>
+                <td>Salário</td>
+                <td data-order="1500">+3000R$</td>
+            </tr>
     </div>
      <!--Scripts-->
      <noscript>
