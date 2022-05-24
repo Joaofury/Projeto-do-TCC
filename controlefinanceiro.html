@@ -50,9 +50,9 @@
   </header>
 
     <div class="containerf">
-      <h4>Saldo atual</h4>
+      <h4 align="center">Saldo atual</h4>
       
-      <h1 id="balance" class="balance">R$ 0.00</h1>
+      <h1 id="balance" align="center" class="balance">R$ 0.00</h1>
 
       <div class="inc-exp-container">
         <div>
@@ -66,22 +66,22 @@
         </div>
       </div>
 
-      <h3>Transações</h3>
+      <h3>Movimentações Recentes</h3>
       
       <ul id="transactions" class="transactions">
       </ul>
 
-      <h3>Adicionar transação</h3>
+      <h3>Adicionar Movimentação</h3>
       
       <form id="form">
        <div class="form-control">
           <label for="text">Nome</label>
-          <input autofocus class="inputransaction" type="text" id="text" placeholder="Nome da transação" />
+          <input autofocus class="inputransaction" type="text" id="text" placeholder="Nome da Movimentação" />
           <label for="date">Data</label>
           <input class="date" type="date" id="date"/> 
           <label>Categoria</label> 
             <div class="dropdownf">
-         <input type="text" placeholder="Selecione uma Categoria" class="text" readonly>
+         <input type="text" id="category" placeholder="Selecione uma Categoria" class="text" readonly>
          <div class="option">
          <div id="salario" name="salario" onclick="show('Salário')"><ion-icon name="cash-outline"></ion-icon>Salário</div>
          <div id="contas" name="contas" onclick="show('Contas')"><ion-icon name="barcode-outline"></ion-icon>Contas</div>
@@ -101,7 +101,7 @@
           <label for="amount">Valor <br />
             <small>(negativo - despesas, positivo - receitas)</small>
           </label>
-          <input type="number" class="inputvalor" id="amount" placeholder="Valor da transação" />
+          <input type="number" class="inputvalor" id="amount" placeholder="Valor da Movimentação" />
         </div>
 
         <button class="btnf">Adicionar</button>
