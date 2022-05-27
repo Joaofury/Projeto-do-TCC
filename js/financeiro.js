@@ -28,7 +28,7 @@ const addTransactionIntoDOM = transaction =>{
 
     const li = document.createElement('li')
     li.classList.add(CSSClass)
-    li.innerHTML = `${transaction.name}, Categoria: ${category.value}
+    li.innerHTML = `${transaction.name}
     <span>${operator}$ ${amountWhithoutOperator}</span>
     <button class="delete-btn" onClick="removeTransaction(${transaction.id})">x</button>`
     transactionsUL.append(li)
@@ -66,7 +66,7 @@ const updateLocalStorage = () => {
 }
 
 const generateID = () => Math.round(Math.random()* 1000)
-form.addEventListener('submit', evennt =>{
+form.addEventListener('submit', event =>{
     event.preventDefault()
     const transactionName = inputTransactioName.value.trim()
     const transactionAmount = inputTransactioAmount.value.trim()

@@ -73,7 +73,7 @@
 
       <h3>Adicionar Movimentação</h3>
       
-      <form id="form">
+      <form method="post" action="controlefinanceiro.php" id="form">
        <div class="form-control">
           <label for="text">Nome</label>
           <input autofocus class="inputransaction" type="text" id="text" placeholder="Nome da Movimentação" />
@@ -104,7 +104,7 @@
           <input type="number" class="inputvalor" id="amount" placeholder="Valor da Movimentação" />
         </div>
 
-        <button class="btnf">Adicionar</button>
+        <button type="submit" class="btnf">Adicionar</button>
       </form>
     </div>
      <!--Scripts-->
