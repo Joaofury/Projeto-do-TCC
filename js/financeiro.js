@@ -79,7 +79,6 @@ form.addEventListener('submit', event =>{
    transactions.push(transaction)
    init()
    updateLocalStorage()
-   inputTransactioName.value=''
-   inputTransactioName.value=''
+
 
 })

@@ -16,8 +16,9 @@
 	} else {
 		echo "<script>
 			  window.location.replace('controlefinanceiro.html');
+			  preventDefault();
 			  </script>;";
-	} 
+	}; 
 
 
 		

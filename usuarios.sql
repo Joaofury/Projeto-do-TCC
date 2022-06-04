@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Abr-2022 às 18:01
+-- Tempo de geração: 04-Jun-2022 às 02:56
 -- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.2
+-- versão do PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,37 +40,57 @@ CREATE TABLE `tablogin` (
 --
 
 INSERT INTO `tablogin` (`ID`, `email`, `usuario`, `senha`, `cpf`) VALUES
-(1, 'joaovictormorenos123@gmail.com', 'aaa', '8010166944809d4cf358f95f3e6cbced', 1232),
-(2, 'joaovictormorenos123@gmail.com', 'wewrwer', '8010166944809d4cf358f95f3e6cbced', 12),
-(3, 'wewrwer@gmail.com', 'wewrwer', '8010166944809d4cf358f95f3e6cbced', 23),
-(4, 'asdad@gmail.com', 'aaa', '202cb962ac59075b964b07152d234b70', 2147483647),
-(5, 'asdad@gmail.com', 'aaa', '202cb962ac59075b964b07152d234b70', 2147483647),
-(6, 'asdad@gmail.com', 'aaa', '202cb962ac59075b964b07152d234b70', 2147483647),
-(7, 'asdad@gmail.com', '1111', '202cb962ac59075b964b07152d234b70', 2147483647),
-(8, 'joaovictormorenos123@gmail.com', 'wewrwer', '202cb962ac59075b964b07152d234b70', 2147483647),
-(9, 'joaovictormorenos123@gmail.com', 'wewrwer', '979d472a84804b9f647bc185a877a8b5', 2147483647),
-(10, 'joaovictormorenos123@gmail.com', 'wewrwer', '979d472a84804b9f647bc185a877a8b5', 2147483647),
-(11, 'joaovictormorenos123@gmail.com', 'wewrwer', '979d472a84804b9f647bc185a877a8b5', 2147483647),
-(12, 'joaovictormorenos123@gmail.com', 'wewrwer', '979d472a84804b9f647bc185a877a8b5', 2147483647),
-(13, 'joaovictormorenos123@gmail.com', 'wewrwer', '979d472a84804b9f647bc185a877a8b5', 2147483647),
-(14, '', '', 'd41d8cd98f00b204e9800998ecf8427e', 0),
-(15, 'joaovictormorenos123@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
-(16, 'teste@teste.com', 'wewrwer', '202cb962ac59075b964b07152d234b70', 2147483647),
-(17, 'teste@teste.com', 'wewrwer', '202cb962ac59075b964b07152d234b70', 2147483647),
-(18, 'teste@teste.com', 'wewrwer', '202cb962ac59075b964b07152d234b70', 2147483647),
-(19, 'teste@teste.com', 'wewrwer', '202cb962ac59075b964b07152d234b70', 2147483647),
-(20, 'teste@teste.com', 'wewrwer', '8010166944809d4cf358f95f3e6cbced', 2147483647),
-(21, 'joaovictormorenos123@gmail.com', 'wewrwer', '8010166944809d4cf358f95f3e6cbced', 2147483647),
-(22, 'arrumaai@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
-(23, 'arrumaai@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
-(24, 'arrumaai@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
-(25, 'arrumaai@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
 (26, 'arrumaai@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
 (27, 'arrumaai@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
 (28, 'arrumaai@gmail.com', 'sddsdfs', '202cb962ac59075b964b07152d234b70', 2147483647),
 (29, 'joaovictormorenos321@gmail.com', 'wewrwer', '2321994d85d661d792223f647000c65f', 2147483647),
 (30, 'joaovictormorenos123@gmail.com', 'wewrwer', '8010166944809d4cf358f95f3e6cbced', 2147483647),
-(31, 'joaovictormorenos123@gmail.com', 'wewrwer', '8010166944809d4cf358f95f3e6cbced', 2147483647);
+(31, 'joaovictormorenos123@gmail.com', 'wewrwer', '8010166944809d4cf358f95f3e6cbced', 2147483647),
+(32, '', 'gdfg34', '0c0b3da4ac402bd86191d959be081114', 2147483647);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tab_controlefinanceiro`
+--
+
+CREATE TABLE `tab_controlefinanceiro` (
+  `id` int(11) NOT NULL,
+  `nomemov` varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `data` date NOT NULL,
+  `categoria` varchar(30) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `valor` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tab_controlefinanceiro`
+--
+
+INSERT INTO `tab_controlefinanceiro` (`id`, `nomemov`, `data`, `categoria`, `valor`) VALUES
+(1, '', '2022-06-08', 'Contas', 150),
+(2, '', '2022-06-30', 'Salário', 1200),
+(3, 'Teste', '0000-00-00', '', 0),
+(4, 'Teste', '2022-06-07', 'Contas', 150),
+(5, '', '0000-00-00', '', 0),
+(6, '', '0000-00-00', '', 0),
+(7, '', '0000-00-00', '', 0),
+(8, '', '0000-00-00', '', 0),
+(9, '', '0000-00-00', '', 0),
+(10, 'gt', '0000-00-00', '', 0),
+(11, '', '0000-00-00', '', 0),
+(12, '', '0000-00-00', '', 0),
+(13, 'rty', '0000-00-00', '', 0),
+(14, '', '2022-06-27', 'Contas', 123),
+(15, '', '0000-00-00', '', 0),
+(16, '', '0000-00-00', '', 0),
+(17, '', '2022-05-31', 'Salário', 23421),
+(18, 'sdfsd', '2022-05-31', 'Compras', 342),
+(19, '', '2022-06-15', 'Contas', 343),
+(20, 'a', '1111-11-11', 'Salário', 23),
+(21, 'sd', '0011-01-11', 'Contas', 11),
+(22, 'Teste', '2022-05-29', 'Salário', 136),
+(23, 'Teste', '2022-06-08', 'Compras', 132),
+(24, 'teste', '2022-06-07', 'Salário', 1355);
 
 --
 -- Índices para tabelas despejadas
@@ -83,6 +103,12 @@ ALTER TABLE `tablogin`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Índices para tabela `tab_controlefinanceiro`
+--
+ALTER TABLE `tab_controlefinanceiro`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -90,7 +116,13 @@ ALTER TABLE `tablogin`
 -- AUTO_INCREMENT de tabela `tablogin`
 --
 ALTER TABLE `tablogin`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT de tabela `tab_controlefinanceiro`
+--
+ALTER TABLE `tab_controlefinanceiro`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
