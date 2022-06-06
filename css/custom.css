@@ -36,9 +36,9 @@ body::-webkit-scrollbar {
 
 #header {
 position: sticky;
-width: 100%;
+width: auto;
 background-color: #793ea9;
-transition: ease-in 0.s;
+transition: ease-in 0.3s;
 padding-top: auto;
 
 }

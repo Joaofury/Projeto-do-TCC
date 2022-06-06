@@ -1,0 +1,83 @@
+.tabela-estilizada{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin: auto;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .tabela-estilizada thead tr {
+    background-color: #793EA9;
+    color: #ffffff;
+    text-align: left;
+    transition: 0.2s;
+
+  }
+  
+  .tabela-estilizada th,
+  .tabela-estilizada td {
+    padding: 12px 15px;
+    transition: 0.2s;
+
+  }
+  .tabela-estilizada tbody tr {
+    border-bottom: 1px solid #dddddd;
+    transition: 0.2s;
+
+  }
+  
+  .tabela-estilizada tbody :hover {
+      transition: 0.2s;
+    background-color: #e4e4e4;
+  }
+  
+  .tabela-estilizada tbody tr:last-of-type {
+    border-bottom: 2px solid #793EA9;
+  }
+  .tabela-estilizada tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+    transition: 0.2s;
+
+  }
+  .btnt {
+    cursor: pointer;
+    background-color: #9c88ff;
+    color: #fff;
+    border: 0;
+    font-size: 16px;
+    margin: 15px 0 30px;
+    padding: 10px;
+    width: 70%;
+    transition: 0.2s;
+    top:20px;
+  }
+  
+.btnt:focus
+ {
+  outline: 0;
+}
+.btnt:hover
+{
+  background-color: #FFCA2C;
+  transition: 0.2s;
+}
+
+  .tabelas{
+      background-color: transparent;
+      width: 70%;
+      margin: auto;
+      bottom: auto;
+      
+  }
+
+  .input{
+     text-align: center;
+      margin-top: 30px;
+  }
+  .resumo{
+      width: 65%;
+  }
