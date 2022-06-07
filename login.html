@@ -39,11 +39,13 @@
      </div>
      <div class="card-group">
      <label>Senha</label>
-     <input type="password" placeholder="Digite sua senha" name="senha" required/> 
+     <input type="password" placeholder="Digite sua senha"  id="senha" name="senha" required/> 
     </div>
      <div class="card-group btn">
       <button type="submit">Login</button>
-      
+      <script>
+      sessionStorage.setItem('usuarioLogado', '1');
+    </script>
      </div>
      <div class="card-top cad">
        <p>Não possui cadastro?<a href="cadastro.html">Cadastrar-se</a></p>
@@ -58,6 +60,7 @@
 
 
 <!--usuario desativou o javascript-->
+
 <noscript>
   <meta http-equiv="refresh" content="0;url=ativeojava.html">
 </noscript>

@@ -4,4 +4,5 @@
 @import url(./custom.css);
 @import url(./responsive.css);
 @import url(./financeiro.css);
-@import url(./financeiro.scss)
+@import url(./financeiro.scss);
+@import url(./tables.css);

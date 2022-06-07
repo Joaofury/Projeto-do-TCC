@@ -17,6 +17,7 @@
   margin-bottom: -30px;
 }
  .form-control {
+   background-color: transparent;
    margin-bottom: 30px;
    padding-bottom: 10px;
  }
@@ -58,7 +59,7 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: #fff;
+  background-color: transparent;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;

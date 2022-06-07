@@ -10,6 +10,19 @@
     <title>Controle de despesas</title>
   </head>
   <body>
+    <script>
+    var usuarioLogado = sessionStorage.getItem('usuarioLogado');
+
+if (!usuarioLogado) {
+    alert("Faça o login primeiro!")
+    window.location.replace("login.html");
+
+}
+else{
+  alert("vc está logado")
+  
+}
+</script>
     <header>
       <header>
         <div id="header">
@@ -114,6 +127,7 @@
       </form>
     </div>
      <!--Scripts-->
+     
      <noscript>
       <meta http-equiv="refresh" content="0;url=ativeojava.html">
      </noscript>

@@ -3,9 +3,8 @@
 
 require_once('conexao.php');
 
-
-$query_select_financeiro="SELECT * FROM tab_controlefinanceiro";
- 
+session_start();
+$query_select_financeiro="SELECT * FROM tab_controlefinanceiro WHERE id_user = ".$_SESSION['ID']; 
 $sql_select_financeiro=mysqli_query($conn,$query_select_financeiro);
 if($sql_select_financeiro == false)
 	{

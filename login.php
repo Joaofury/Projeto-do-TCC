@@ -6,7 +6,7 @@
         $email = mysqli_real_escape_string($conn, $_POST['email']); //Escapar de caracteres especiais, como aspas, prevenindo SQL injection
         $senha = mysqli_real_escape_string($conn, $_POST['senha']);
         $senha = md5($senha);
-            
+        
         //Buscar na tabela usuario o usuário que corresponde com os dados digitado no formulário
         $result_usuario = "SELECT * FROM tablogin WHERE email = '$email' && senha = '$senha' LIMIT 1";
         $resultado_usuario = mysqli_query($conn, $result_usuario);
@@ -14,6 +14,7 @@
         if(isset($resultado)){
             $_SESSION['email'] = $resultado['email'];
             $_SESSION['senha'] = $resultado['senha'];
+            $_SESSION['ID'] = $resultado ['ID'];
             header("Location: index.html");
         }else{    
             //Váriavel global recebendo a mensagem de erro
