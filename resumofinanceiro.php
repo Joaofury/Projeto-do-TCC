@@ -53,8 +53,8 @@ if($sql_select_financeiro == false)
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="controlefinanceiro.html">Controle financeiro</a></li>
-                    <li><a class="dropdown-item" href="resumofinanceiro.php">Resumo financeiro</a></li>
+                    <li><a class="dropdown-item" href="verificausuario.php">Controle financeiro</a></li>
+                    <li><a class="dropdown-item" href="verificausuario2.php">Resumo financeiro</a></li>
                   </ul>
                 <li class="nav-item">
                   <a class="nav-link" href="sobrenos.html">Sobre nós</a>
@@ -128,7 +128,9 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 </div>
 </div>
 </div></div>
-
+<noscript>
+      <meta http-equiv="refresh" content="0;url=ativeojava.html">
+     </noscript>
 <!-- jQuery, Popper.js, Bootstrap JS -->	
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

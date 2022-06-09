@@ -10,19 +10,7 @@
     <title>Controle de despesas</title>
   </head>
   <body>
-    <script>
-    var usuarioLogado = sessionStorage.getItem('usuarioLogado');
-
-if (!usuarioLogado) {
-    alert("Faça o login primeiro!")
-    window.location.replace("login.html");
-
-}
-else{
-  alert("vc está logado")
-  
-}
-</script>
+   
     <header>
       <header>
         <div id="header">
@@ -46,8 +34,8 @@ else{
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="controlefinanceiro.html">Controle financeiro</a></li>
-                    <li><a class="dropdown-item" href="resumofinanceiro.php">Resumo financeiro</a></li>
+                    <li><a class="dropdown-item" href="verificausuario.php">Controle financeiro</a></li>
+                    <li><a class="dropdown-item" href="verificausuario2.php">Resumo financeiro</a></li>
                   </ul>
                 <li class="nav-item">
                   <a class="nav-link" href="sobrenos.html">Sobre nós</a>

@@ -23,6 +23,11 @@ body::-webkit-scrollbar {
     color: rgb(98, 39, 107);
     transition: 0.3s;
 }
+.sair{
+  width:23px;
+  position: relative;
+  
+}
 /*fim*/
 .dropdown-item{
     cursor: pointer;
