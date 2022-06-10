@@ -6,18 +6,26 @@
 	$senha = md5($_POST['senha']);
 	$cpf = $_POST['cpf'];
 	// criando a linha de INSERT
-	$sqlinsert =  "insert into tablogin ( email,usuario, senha, cpf) values ('$email','$usuario', '$senha', '$cpf')";
-	
-	// executando instrução SQL
- $resultado = @mysqli_query($conn, $sqlinsert);
 
-	if (!$resultado) {
-		die('Query Inválida: ' . @mysqli_error($conn));  
-	} else {
-		echo "<script>
+	$result_usuario = "SELECT email FROM tablogin WHERE email = '$email'";
+	$result = $conn->query($result_usuario,);
+  
+	// executando instrução SQL
+	$retorno = $result->num_rows;
+    if($retorno === 0){
+		$sqlinsert = $conn->prepare( "insert into tablogin ( email,usuario, senha, cpf) values ('$email','$usuario', '$senha', '$cpf')");
+		$sqlinsert -> execute();
+			echo "<script>
 		      alert('Cadastrado com sucesso!');
-			  window.location.replace('login.html');
+			  window.location.replace('login.html');  
 			  </script>;";
+	}
+	 elseif($retorno >=1) {
+		echo "<script>
+		      alert('Email já cadastrado!');
+			  window.location.replace('cadastro.html');  
+			  </script>;";
+			  exit;
 	} 
 
 
