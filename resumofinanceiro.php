@@ -26,7 +26,7 @@ if($sql_select_financeiro == false)
 <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
-<title>Agenda</title>
+<title>Resumo Financeiro</title>
 </head>
 
 <body>
@@ -47,9 +47,7 @@ if($sql_select_financeiro == false)
                 <li class="nav-item">
                   <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Agenda</a>
-                </li>
+               
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Serviços</a>
                   <ul class="dropdown-menu fade-up" aria-labelledby="navbarDropdown">
@@ -60,7 +58,10 @@ if($sql_select_financeiro == false)
                   <a class="nav-link" href="sobrenos.html">Sobre nós</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link ml-1"  href="login.html">Login</a>
+                  <a class="nav-link ml-1"  href="verificalogin.php">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ml-1"  href="deslogar.php">Sair<ion-icon  class="sair" name="exit-outline"></ion-icon></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link ml-1 escuro"  onclick="darkmode()">Modo Escuro</a>
@@ -132,6 +133,8 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
       <meta http-equiv="refresh" content="0;url=ativeojava.html">
      </noscript>
 <!-- jQuery, Popper.js, Bootstrap JS -->	
+<script  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>

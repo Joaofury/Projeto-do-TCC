@@ -129,6 +129,21 @@ outline: 0;
     background-image: linear-gradient(to right, #7d3ca6, #210d2e);
 
 }
+.mail-outline{
+    margin-bottom: -3px;
+}
+.person-outline{
+    margin-bottom: -3px;
+
+}
+.lock-closed-outline{
+    margin-bottom: -3px;
+
+}
+.finger-print-outline{
+    margin-bottom: -3px;
+
+}
 .cad{
     padding: auto;
     width: auto;
@@ -166,8 +181,9 @@ outline: 0;
    }
    .card-group-cad-option{
     position: relative;
-    bottom:40px;
-    left: 35%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 110%;
    }
 
    .card-group-cad-button> button {

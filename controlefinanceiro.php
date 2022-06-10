@@ -5,8 +5,9 @@
 	$data = $_POST['data'];		
 	$categoria = $_POST['categoria'];
 	$valor = $_POST['valor'];
-	// criando a linha de INSERT
-	$sqlinsert =  "insert into tab_controlefinanceiro ( nomemov, data, categoria, valor ) values ('$nomemov','$data', '$categoria', '$valor')";
+		// criando a linha de INSERT
+		session_start();
+	$sqlinsert =  "insert into tab_controlefinanceiro ( id_user, nomemov, data, categoria, valor ) values ('{$_SESSION['ID']}','$nomemov','$data', '$categoria', '$valor')";
 	
 	// executando instrução SQL
  $resultado = @mysqli_query($conn, $sqlinsert);

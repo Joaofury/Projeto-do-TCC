@@ -26,7 +26,8 @@ body::-webkit-scrollbar {
 .sair{
   width:23px;
   position: relative;
-  
+  margin-bottom: -3px;
+  transition: 0.5s;
 }
 /*fim*/
 .dropdown-item{
@@ -144,3 +145,13 @@ table{
 	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
 }	
 /*Fim da animação*/
+.vid-border{
+  position: relative;
+  height: 480px;
+  width: 640px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.escuro{
+ cursor: pointer;
+}
