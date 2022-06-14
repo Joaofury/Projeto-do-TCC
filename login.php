@@ -13,6 +13,7 @@
         $resultado = mysqli_fetch_assoc($resultado_usuario);
         if(isset($resultado)){
             $_SESSION['email'] = $resultado['email'];
+            $_SESSION['usuario'] = $resultado['usuario'];
             $_SESSION['senha'] = $resultado['senha'];
             $_SESSION['ID'] = $resultado ['ID'];
             header("Location: index.html");

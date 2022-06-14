@@ -4,6 +4,9 @@
 require_once('conexao.php');
 
 session_start();
+
+
+
 $query_select_financeiro="SELECT * FROM tab_controlefinanceiro WHERE id_user = ".$_SESSION['ID']; 
 $sql_select_financeiro=mysqli_query($conn,$query_select_financeiro);
 if($sql_select_financeiro == false)
@@ -72,10 +75,11 @@ if($sql_select_financeiro == false)
         </nav>
         </div>
         </div>
-        
       
     </header>
 <div class="container-fluid">
+<h1 class="mt-3" align="center">Olá, <?php echo("{$_SESSION['usuario']}.");?>
+</h1>
 	<div class="input">
 <input type="text"  class="resumo" id="myInput" onkeyup="myFunction()" placeholder="Palavra chave da movimentação" title="Type in a name" />
 </div>
@@ -103,6 +107,7 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 		$data=$array_select_financeiro["data"];
 		$categoria=$array_select_financeiro["categoria"];
 		$valor=$array_select_financeiro["valor"];
+    
  echo
  " <tbody>
    <tr>
@@ -115,12 +120,13 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 	
 	
 	<!--   É um parâmetro que será passado para o programa deletar_contato.php   -->
-	<td><a href=\"deletar_contato.php?id_contato=$id\">Deletar</a></td>
+	<td><a href=\"delete.php\">Deletar</a></td>
   </tr>
   ";
 	}
 }
 ?>
+
   </tbody>
 </table>
 </div>

@@ -1,7 +1,7 @@
 body, html
 {
     font-family: 'Fredoka', sans-serif;
-    background-color: #ffffff99;
+    background-color: transparent;
     zoom:0.95;
     transition: 0.3s;
 }

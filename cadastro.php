@@ -6,7 +6,6 @@
 	$senha = md5($_POST['senha']);
 	$cpf = $_POST['cpf'];
 	// criando a linha de INSERT
-
 	$result_usuario = "SELECT email FROM tablogin WHERE email = '$email'";
 	$result = $conn->query($result_usuario,);
   
