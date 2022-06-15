@@ -107,6 +107,7 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 		$data=$array_select_financeiro["data"];
 		$categoria=$array_select_financeiro["categoria"];
 		$valor=$array_select_financeiro["valor"];
+    $id =$array_select_financeiro["id"];
     
  echo
  " <tbody>
@@ -115,12 +116,11 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
     <td>$data</td>
     <td>$categoria</td>
     <td>$valor R$</td>
-	<!--   É um parâmetro que será passado para o programa editar_contato.php   -->
-	<td><a href=\"editar_contato.php?id_contato=$id\">Editar</a></td>
+
 	
 	
 	<!--   É um parâmetro que será passado para o programa deletar_contato.php   -->
-	<td><a href=\"delete.php\">Deletar</a></td>
+	<td><a href=\"delete.php?id=$id\">Deletar</a></td>
   </tr>
   ";
 	}
@@ -131,7 +131,7 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 </table>
 </div>
 <div class="container-fluid text-center">
-   <button type="" class="btnt" href="controlefinanceiro.html">Inserir Movimentações</button>
+   <button type=""onclick="window.location.href='verificausuario.php'" class="btnt" href="controlefinanceiro.html">Inserir Movimentações</button>
 </div>
 </div>
 </div></div>
