@@ -84,6 +84,7 @@ if($sql_select_financeiro == false)
 <input type="text"  class="resumo" id="myInput" onkeyup="myFunction()" placeholder="Palavra chave da movimentação" title="Type in a name" />
 </div>
 <table id="myTable" class="tabela-estilizada">
+  <section id="tabela">
  <thead>
 		  <tr>
 			
@@ -95,6 +96,7 @@ if($sql_select_financeiro == false)
 		 
 			</tr>
 	</thead>
+</section>
 <?php  
 if(mysqli_num_rows($sql_select_financeiro) > 0)
 {
@@ -132,6 +134,10 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 </div>
 <div class="container-fluid text-center">
    <button type=""onclick="window.location.href='verificausuario.php'" class="btnt" href="controlefinanceiro.html">Inserir Movimentações</button>
+
+  </div>
+  <div class="container-fluid text-center">
+  <button class="pdfbt" onclick="window.print()">PDF</button>
 </div>
 </div>
 </div></div>
@@ -140,12 +146,15 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
      </noscript>
 <!-- jQuery, Popper.js, Bootstrap JS -->	
 <script  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.2.11/jspdf.plugin.autotable.js" integrity="sha512-aEDToECARoy1y+c5T99o96YSfZfLq2lhxquDIJ8737ENQU/xF22UYOj+nHMXi4k+pKn+D1gVWzC3yYbVDOMicQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js" integrity="sha512-ToRWKKOvhBSS8EtqSflysM/S7v9bB9V0X3B1+E7xo7XZBEZCPL3VX5SFIp8zxY19r7Sz0svqQVbAOx+QcLQSAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/darkmode.js"></script>
+
+
 	<script>
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
@@ -166,6 +175,7 @@ function myFunction() {
   }
 }
 </script>
+
 
 </body>
 </html>
