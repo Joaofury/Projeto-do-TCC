@@ -83,11 +83,13 @@ if($sql_select_financeiro == false)
 	<div class="input">
 <input type="text"  class="resumo" id="myInput" onkeyup="myFunction()" placeholder="Palavra chave da movimentação" title="Type in a name" />
 </div>
+
 <table id="myTable" class="tabela-estilizada">
-  <section id="tabela">
+  
  <thead>
+  
 		  <tr>
-			
+			<div class="printme">
 					<th >Nome da Movimentação</th>
 					<th >Data</th>
 					<th >Categoria</th>
@@ -95,8 +97,9 @@ if($sql_select_financeiro == false)
 					<th  colspan="2">Opções</th>
 		 
 			</tr>
+    </div>
 	</thead>
-</section>
+
 <?php  
 if(mysqli_num_rows($sql_select_financeiro) > 0)
 {
@@ -128,7 +131,7 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 	}
 }
 ?>
-
+</div>
   </tbody>
 </table>
 </div>
@@ -137,10 +140,11 @@ if(mysqli_num_rows($sql_select_financeiro) > 0)
 
   </div>
   <div class="container-fluid text-center">
-  <button class="pdfbt" onclick="window.print()">PDF</button>
+  <button class="pdfbt" onclick={window.print()}>PDF</button>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <noscript>
       <meta http-equiv="refresh" content="0;url=ativeojava.html">
      </noscript>

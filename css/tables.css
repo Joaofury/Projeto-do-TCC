@@ -81,16 +81,18 @@
   .resumo{
       width: 65%;
   }
-  @media print{
-    body *:not(#tabela):not(#tabela *){
-      visibility: hidden;
+  .printme {
+    display: none;
+  }
+  @media print {
+    .no-printme  {
+      display: none;
     }
-    #tabela{
-      position: absolute;
-      top: 0;
-      left: 0;
+    .printme  {
+      display: block;
     }
   }
+  
 
   .pdfbt {
     cursor: pointer;
