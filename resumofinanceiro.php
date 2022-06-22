@@ -31,7 +31,7 @@ if($sql_select_financeiro == false)
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
 <title>Resumo Financeiro</title>
 </head>
-
+<!--d-->
 <body>
   <header>
       <header>
@@ -85,11 +85,11 @@ if($sql_select_financeiro == false)
 </div>
 
 <table id="myTable" class="tabela-estilizada">
-  
+  			<div class="printme">
+
  <thead>
   
 		  <tr>
-			<div class="printme">
 					<th >Nome da Movimentação</th>
 					<th >Data</th>
 					<th >Categoria</th>
@@ -97,9 +97,9 @@ if($sql_select_financeiro == false)
 					<th  colspan="2">Opções</th>
 		 
 			</tr>
-    </div>
+    
 	</thead>
-
+</div>
 <?php  
 if(mysqli_num_rows($sql_select_financeiro) > 0)
 {
